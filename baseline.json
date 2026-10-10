@@ -1,0 +1,7 @@
+{
+  "expected_schema": {
+    "id": "integer",
+    "status": "string"
+  },
+  "allowed_range": [0, 100]
+}
