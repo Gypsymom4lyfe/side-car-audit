@@ -4,7 +4,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from audit_receipt_logger import AuditReceiptLogger
+from receipt_logger import AuditReceiptLogger
 from sidecar_engine import SidecarEngine
 
 

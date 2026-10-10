@@ -1,6 +1,6 @@
 import json
 
-from audit_receipt_logger import AuditReceiptLogger
+from receipt_logger import AuditReceiptLogger
 
 
 class SidecarEngine:

@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from audit_receipt_logger import AuditReceiptLogger, GENESIS_HASH
+from receipt_logger import AuditReceiptLogger, GENESIS_HASH
 
 
 class AuditReceiptLoggerTests(unittest.TestCase):
