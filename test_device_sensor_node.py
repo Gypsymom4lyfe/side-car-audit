@@ -8,7 +8,7 @@ from unittest.mock import patch
 class FakePin:
     IN = 0
 
-    def __init__(self, pin_number, mode):
+    def __init__(self, pin_number, mode=None):
         self.pin_number = pin_number
         self.mode = mode
 
