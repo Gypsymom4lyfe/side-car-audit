@@ -1,8 +1,9 @@
 # Sovereign Sidecar Physical Stack
 
 This document describes a proposed, non-invasive hardware stack for observing
-equipment state independently of its software. It is a design outline, not
-implemented firmware or a validated wiring guide.
+equipment state independently of its software. The repository includes an
+ESP32-oriented MicroPython sensor-node scaffold, but this is not hardware-
+validated firmware or a wiring guide.
 
 ## Bill of materials
 
@@ -34,10 +35,13 @@ must be validated for the target equipment and deployment environment.
 
 ## Integrity and scope
 
-The current Python `receipt_logger.py` implementation stores JSONL receipts
-chained with SHA-256. It does not sign receipts, enforce append-only storage,
-authenticate NFC cards, read sensors, or write to card memory. Hardware
-firmware and a protected signing-key integration are future work.
+The Python `receipt_logger.py` implementation stores JSONL receipts chained
+with SHA-256. The `device_sensor_node.py` scaffold can sample configured
+magnetic and optical GPIO/ADC inputs when its methods are called. It does not
+continuously buffer observations, detect NFC taps, authenticate cards, sign
+receipts, call the Python logger, or write to card memory. Those integrations,
+protected signing-key support, board pin validation, and physical hardware
+testing are future work.
 
 Sensor readings provide evidence of observable physical signals; they do not
 by themselves prove that a machine completed a particular operation or that
